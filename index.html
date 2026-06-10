@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lenka Kyzeková · IT Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo" id="nav-home">Lenka<em>.</em></a>
+  <button class="ctrl on" id="theme-btn" aria-label="Toggle theme">
+    <span id="t-ico">☀️</span><span id="t-lbl">Dark</span>
+  </button>
+</nav>
+
+
+<div class="hero" id="hero">
+  <div class="ring ring-1"></div>
+  <div class="ring ring-2"></div>
+  <div class="ring ring-3"></div>
+  <canvas id="lcanvas"></canvas>
+
+  <div class="node" id="nd-about"    onclick="openPanel('about')"><div class="node-ico">👤</div><div class="node-lbl">About</div></div>
+  <div class="node" id="nd-edu"      onclick="openPanel('edu')"><div class="node-ico">🎓</div><div class="node-lbl">Education</div></div>
+  <div class="node" id="nd-exp"      onclick="openPanel('exp')"><div class="node-ico">💼</div><div class="node-lbl">Experience</div></div>
+  <div class="node" id="nd-projects" onclick="openPanel('projects')"><div class="node-ico">📁</div><div class="node-lbl">Projects</div></div>
+  <div class="node" id="nd-contact"  onclick="openPanel('contact')"><div class="node-ico">✉️</div><div class="node-lbl">Contact</div></div>
+
+  <!-- HOVER TARGET = only this block -->
+  <div class="hero-name-wrap" id="name-wrap">
+    <div class="hero-name">Lenka<br><span class="ln2">Kyzeková</span></div>
+    <div class="hero-role">IT Specialist · Systems &amp; Infrastructure</div>
+    <div class="hero-hint"><div class="hint-line"></div>hover to explore<div class="hint-line"></div></div>
+  </div>
+
+  <div class="hero-ctas">
+    <a href="#" onclick="openPanel('contact');return false;" class="btn-p">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+      Get in touch
+    </a>
+    <a href="https://github.com/LKyz24" target="_blank" class="btn-g">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+      GitHub
+    </a>
+    <a href="https://linkedin.com/in/lenka-kyzekova" target="_blank" class="btn-g">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      LinkedIn
+    </a>
+  </div>
+</div>
+
+<!-- ═══ PANELS ═══ -->
+<div class="panel" id="panel-about">
+  <button class="panel-back" onclick="closePanel()">← Back</button>
+  <div class="panel-inner">
+    <div class="panel-title">About <em>me</em></div>
+    <div class="about-grid">
+      <div>
+        <p class="about-p">I'm a <strong style="color:var(--txt);font-weight:500;">Computer Science graduate from TUKE (Košice)</strong>. My focus is IT infrastructure — servers, networking, virtualization, monitoring, and keeping systems running reliably.</p>
+        <p class="about-p">I'm looking for my first professional IT role where I can grow in a real environment. I learn fast, enjoy digging into technical problems, and I'm comfortable in English-speaking international settings.</p>
+      </div>
+      <div class="about-chips">
+        <div class="chip"><div class="chip-v">2026</div><div class="chip-k">Graduation · TUKE</div></div>
+        <div class="chip"><div class="chip-v">Ing.</div><div class="chip-k">Computer Science</div></div>
+        <div class="chip"><div class="chip-v">B2</div><div class="chip-k">English</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="panel" id="panel-exp">
+  <button class="panel-back" onclick="closePanel()">← Back</button>
+  <div class="panel-inner">
+    <div class="panel-title"><em>Experience</em></div>
+    <div class="exp-scene">
+      <div class="stage">
+        <div class="grad-fig">
+          <div class="g-cap"></div>
+          <div class="g-body"></div>
+          <div class="g-legs"><div class="g-leg"></div><div class="g-leg"></div></div>
+        </div>
+        <div class="podium"><div class="podium-txt">TUKE 2026</div></div>
+      </div>
+      <div class="ach-grid">
+        <div class="ach"><div class="ach-ico">🎓</div><div class="ach-name">Bc. Degree</div><div class="ach-val">Computer Science</div></div>
+        <div class="ach"><div class="ach-ico">🖥️</div><div class="ach-name">Thesis</div><div class="ach-val">IT Infrastructure</div></div>
+        <div class="ach"><div class="ach-ico">🌐</div><div class="ach-name">Networking</div><div class="ach-val">TCP/IP · DNS · AD</div></div>
+        <div class="ach"><div class="ach-ico">🔒</div><div class="ach-name">Security</div><div class="ach-val">Cybersecurity basics</div></div>
+        <div class="ach"><div class="ach-ico">🗄️</div><div class="ach-name">Databases</div><div class="ach-val">SQL · NoSQL</div></div>
+        <div class="ach"><div class="ach-ico">🏠</div><div class="ach-name">Home Lab</div><div class="ach-val">VMware · Zabbix</div></div>
+        <div class="ach"><div class="ach-ico">🇬🇧</div><div class="ach-name">English B2</div><div class="ach-val">Daily use</div></div>
+        <div class="ach"><div class="ach-ico">📜</div><div class="ach-name">Network+</div><div class="ach-val">In progress</div></div>
+        <div class="ach"><div class="ach-ico">☁️</div><div class="ach-name">AZ-900</div><div class="ach-val">In progress</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="panel" id="panel-edu">
+  <button class="panel-back" onclick="closePanel()">← Back</button>
+  <div class="panel-inner">
+    <div class="panel-title">Edu<em>cation</em></div>
+    <div class="tl">
+      <div class="tl-row">
+        <div class="tl-date">2024 — 2026</div>
+        <div><div class="tl-head">Ing. Computer Science</div><div class="tl-co">Technical University of Košice · TUKE</div><div class="tl-body">Trained to specify, implement and maintain complex software and hardware
+          systems — with focus on efficiency, reliability and security. Master thesis: Browser Plugin for Sentiment Analysis on Social Media.</div></div>
+        <div class="tl-date">2020 — 2024</div>
+        <div><div class="tl-head">Bc. Computer Science</div><div class="tl-co">Technical University of Košice · TUKE</div><div class="tl-body">Skilled in databases, information systems and application development —
+          with a foundation in system programming and software/hardware advisory. Bachelor thesis: Driver Drowsiness Detection.</div></div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="panel" id="panel-projects">
+  <button class="panel-back" onclick="closePanel()">← Back</button>
+  <div class="panel-inner">
+    <div class="panel-title">Pro<em>jects</em></div>
+    <div class="s-lbl">GitHub repositories — click a folder to open</div>
+    <div class="laptop">
+      <div class="lb"><div class="dot dr"></div><div class="dot dy"></div><div class="dot dg"></div><div class="laddr">github.com / LKyz24</div></div>
+      <div class="desk">
+        <a href="https://github.com/LKyz24/ad-scripts" target="_blank" class="fol"><div class="fi">📂</div><div class="fn">AD Scripts</div><div class="fs">PowerShell · AD</div></a>
+        <a href="https://github.com/LKyz24/zabbix-templates" target="_blank" class="fol"><div class="fi">📂</div><div class="fn">Zabbix Templates</div><div class="fs">Monitoring · SNMP</div></a>
+        <a href="https://github.com/LKyz24/homelab" target="_blank" class="fol"><div class="fi">📂</div><div class="fn">Homelab Docs</div><div class="fs">VMware · Veeam</div></a>
+        <a href="https://github.com/LKyz24/python-scripts" target="_blank" class="fol"><div class="fi">📂</div><div class="fn">Python Scripts</div><div class="fs">Automation · Net</div></a>
+        <a href="https://github.com/LKyz24" target="_blank" class="fol"><div class="fi">📂</div><div class="fn">Azure AD Lab</div><div class="fs">Cloud · Intune</div></a>
+        <div class="fadd"><div class="fadd-i">＋</div><div class="fadd-l">Coming soon</div></div>
+      </div>
+      <div class="tbar"><div class="ti2 on"></div><div class="ti2"></div><div class="ti2"></div><div class="ttime">GitHub Desktop</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="panel" id="panel-contact">
+  <button class="panel-back" onclick="closePanel()">← Back</button>
+  <div class="panel-inner">
+    <div class="panel-title">Con<em>tact</em></div>
+    <p class="c-intro">Looking for my first IT role — infrastructure, sysadmin, IT support. If my portfolio caught your eye, reach out. I reply fast.</p>
+    <div class="contact-wrap">
+      <div class="phone">
+        <div class="pnotch"></div>
+        <div class="pscr">
+          <div class="pst"><div class="ptime">9:41</div><div class="picns"><div class="pico"></div><div class="pico"></div><div class="pico"></div></div></div>
+          <div class="mhd">Inbox</div>
+          <div class="mrow"><div class="av">?</div><div class="mi2"><div class="mf" style="opacity:.4">You?</div><div class="ms">Write to Lenka ↓</div></div></div>
+        </div>
+      </div>
+      <div class="c-links">
+        <a href="mailto:kyzekova.lenka@gmail.com" class="c-link"><div class="c-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg></div><div><div>kyzekova.lenka@gmail.com</div><span class="c-sub">Email</span></div></a>
+        <a href="https://linkedin.com/in/lenka-kyzekova" target="_blank" class="c-link"><div class="c-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div><div><div>lenka-kyzekova</div><span class="c-sub">LinkedIn</span></div></a>
+        <a href="https://github.com/LKyz24" target="_blank" class="c-link"><div class="c-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></div><div><div>LKyz24</div><span class="c-sub">GitHub</span></div></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="panel" id="panel-skills">
+  <button class="panel-back" onclick="closePanel()">← Back</button>
+  <div class="panel-inner">
+    <div class="panel-title">Tech <em>Skills</em></div>
+    <div class="sk-cats">
+      <div class="sk-cat"><div class="sk-ct">Systems & Networking</div><div class="sk-bars"><div class="sk-row"><span class="sk-n">Windows Server</span><div class="bt"><div class="bf" data-w="82"></div></div><span class="sp">82%</span></div><div class="sk-row"><span class="sk-n">Linux / Ubuntu</span><div class="bt"><div class="bf" data-w="75"></div></div><span class="sp">75%</span></div><div class="sk-row"><span class="sk-n">Active Directory</span><div class="bt"><div class="bf" data-w="78"></div></div><span class="sp">78%</span></div><div class="sk-row"><span class="sk-n">DNS / DHCP</span><div class="bt"><div class="bf" data-w="80"></div></div><span class="sp">80%</span></div></div></div>
+      <div class="sk-cat"><div class="sk-ct">Virtualization & Backup</div><div class="sk-bars"><div class="sk-row"><span class="sk-n">VMware vSphere</span><div class="bt"><div class="bf" data-w="70"></div></div><span class="sp">70%</span></div><div class="sk-row"><span class="sk-n">Hyper-V</span><div class="bt"><div class="bf" data-w="65"></div></div><span class="sp">65%</span></div><div class="sk-row"><span class="sk-n">Veeam Backup</span><div class="bt"><div class="bf" data-w="68"></div></div><span class="sp">68%</span></div></div></div>
+      <div class="sk-cat"><div class="sk-ct">Monitoring & ITSM</div><div class="sk-bars"><div class="sk-row"><span class="sk-n">Zabbix</span><div class="bt"><div class="bf" data-w="72"></div></div><span class="sp">72%</span></div><div class="sk-row"><span class="sk-n">PRTG</span><div class="bt"><div class="bf" data-w="60"></div></div><span class="sp">60%</span></div><div class="sk-row"><span class="sk-n">Jira / ServiceNow</span><div class="bt"><div class="bf" data-w="65"></div></div><span class="sp">65%</span></div></div></div>
+    </div>
+    <div class="s-lbl">Cloud, scripting & tools</div>
+    <div class="sk-tags"><span class="sk-tag">Microsoft 365</span><span class="sk-tag">Exchange Online</span><span class="sk-tag">SharePoint</span><span class="sk-tag">MS Teams</span><span class="sk-tag">Azure AD</span><span class="sk-tag">Intune</span><span class="sk-tag">PowerShell</span><span class="sk-tag">Bash</span><span class="sk-tag">Python</span><span class="sk-tag">SQL</span><span class="sk-tag">Git</span><span class="sk-tag">GitHub</span><span class="sk-tag">Docker basics</span><span class="sk-tag">SNMP</span><span class="sk-tag">ITIL basics</span></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
